@@ -1,0 +1,4 @@
+{
+  "host": "demo.dev",
+  "config": "Host *.dev !excluded.dev\n User synthetic\n Port 2222\n IdentityFile example-a\nHost *\n User fallback\n IdentityFile example-b\n"
+}

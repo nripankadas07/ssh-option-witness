@@ -1,0 +1,23 @@
+{
+  "name": "ssh-option-witness",
+  "state": "VALIDATED",
+  "user": "Developer debugging host-specific SSH client settings.",
+  "pain": "Show which matching declaration supplied a value without connecting or executing commands.",
+  "smallest_capability": "Strict documented Host/option subset, first scalar value and additive identity files, with source line trace and skipped override reasons.",
+  "acceptance": [
+    "Positive and negated host patterns, case-insensitive host matching.",
+    "Earlier scalar wins; additive identity files preserve declaration order.",
+    "Reject Include, Match and unsupported options rather than ignoring them."
+  ],
+  "demand": "Inferred from OpenSSH configuration semantics and established parser workflows; no verified request.",
+  "discovery": "SSH configuration troubleshooting examples.",
+  "distinctness": "Existing network tools do not resolve host declarations.",
+  "limits": "No full OpenSSH emulation, includes, token expansion, command execution, filesystem lookup or connections.",
+  "local_validation": {
+    "unit_tests": 14,
+    "wheel_and_clean_install": "PASS",
+    "Python": "Linux 3.12.14",
+    "remote_ci": "NOT_RUN"
+  },
+  "publication": "Website publication in progress; remote CI not yet verified"
+}

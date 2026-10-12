@@ -1,0 +1,105 @@
+{
+  "name": "ssh-option-witness",
+  "state": "VALIDATED",
+  "tested": "Linux Python 3.12.14",
+  "unit_tests": 14,
+  "install_passed": true,
+  "remote_ci": "NOT_RUN",
+  "publication": "Website publication in progress; remote CI not yet verified",
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-index",
+        "--no-deps",
+        "--no-build-isolation",
+        "--wheel-dir",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness/wheelhouse",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: ssh-option-witness\n  Building wheel for ssh-option-witness (pyproject.toml): started\n  Building wheel for ssh-option-witness (pyproject.toml): finished with status 'done'\n  Created wheel for ssh-option-witness: filename=ssh_option_witness-0.1.0-py3-none-any.whl size=4232 sha256=07dc8b8410bf984394757365172f097c21053eef8181da08b7ffaea67d99043e\n  Stored in directory: /tmp/pip-ephem-wheel-cache-yzw1ml9a/wheels/9e/c7/c1/bc15c39aac4d74d266e747d3915aa46c705db6c333877f1d23\nSuccessfully built ssh-option-witness\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/candidate-install-7244xsvw/venv"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-7244xsvw/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness/wheelhouse/ssh_option_witness-0.1.0-py3-none-any.whl"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness/wheelhouse/ssh_option_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: ssh-option-witness\nSuccessfully installed ssh-option-witness-0.1.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-7244xsvw/venv/bin/ssh-option-witness",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/ssh-option-witness/example.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"host\": \"demo.dev\", \"trace\": [{\"keyword\": \"host\", \"line\": 1, \"matched\": true}, {\"keyword\": \"user\", \"line\": 2, \"reason\": \"selected\"}, {\"keyword\": \"port\", \"line\": 3, \"reason\": \"selected\"}, {\"keyword\": \"identityfile\", \"line\": 4, \"reason\": \"appended\"}, {\"keyword\": \"host\", \"line\": 5, \"matched\": true}, {\"keyword\": \"user\", \"line\": 6, \"reason\": \"earlier_value_wins\"}, {\"keyword\": \"identityfile\", \"line\": 7, \"reason\": \"appended\"}], \"values\": {\"identityfile\": [\"example-a\", \"example-b\"], \"port\": \"2222\", \"user\": \"synthetic\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-7244xsvw/venv/bin/ssh-option-witness",
+        "/tmp/candidate-install-7244xsvw/bad.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: bounded host and configuration required\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-7244xsvw/venv/bin/ssh-option-witness",
+        "/tmp/candidate-install-7244xsvw/missing.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: [Errno 2] No such file or directory: '/tmp/candidate-install-7244xsvw/missing.json'\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-7244xsvw/venv/bin/ssh-option-witness",
+        "/tmp/candidate-install-7244xsvw/large.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: input exceeds 1 MiB\n"
+    }
+  ],
+  "wheel": {
+    "name": "ssh_option_witness-0.1.0-py3-none-any.whl",
+    "sha256": "07dc8b8410bf984394757365172f097c21053eef8181da08b7ffaea67d99043e"
+  }
+}
