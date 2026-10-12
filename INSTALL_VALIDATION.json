@@ -4,8 +4,54 @@
   "tested": "Linux Python 3.12.14",
   "unit_tests": 14,
   "install_passed": true,
-  "remote_ci": "NOT_RUN",
-  "publication": "Website publication in progress; remote CI not yet verified",
+  "remote_ci": {
+    "source_head": "c0ec5e19aca3a3ff23b5e437b924499f7a3f0fe1",
+    "runtimes": [
+      "3.10",
+      "3.12",
+      "3.14"
+    ],
+    "platform": "ubuntu-latest",
+    "checks": [
+      {
+        "name": "verify (3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220635371/job/114715760363"
+      },
+      {
+        "name": "verify (3.10)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220635371/job/114715760350"
+      },
+      {
+        "name": "verify (3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220635371/job/114715760066"
+      },
+      {
+        "name": "verify (3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220561741/job/114715513471"
+      },
+      {
+        "name": "verify (3.10)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220561741/job/114715513228"
+      },
+      {
+        "name": "verify (3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38220561741/job/114715512981"
+      }
+    ]
+  },
+  "publication": "Public alpha; exact reviewed source head verified by remote CI",
   "commands": [
     {
       "command": [
@@ -101,5 +147,6 @@
   "wheel": {
     "name": "ssh_option_witness-0.1.0-py3-none-any.whl",
     "sha256": "07dc8b8410bf984394757365172f097c21053eef8181da08b7ffaea67d99043e"
-  }
+  },
+  "canonical_live_receipts": "https://github.com/nripankadas07/nripankadas07/blob/main/docs/PROJECT_INDEX.md"
 }
